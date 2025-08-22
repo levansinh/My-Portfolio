@@ -1,5 +1,6 @@
 "use client";
 
+import { CONTACTS } from "@/assets/data";
 import { ContactForm } from "@/components/contact-form";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { FloatingNav } from "@/components/floating-nav";
@@ -68,7 +69,7 @@ export default function Portfolio() {
 					<div className="space-y-6">
 						<div className="inline-block">
 							<div className="relative mt-4 mb-4 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium backdrop-blur-xs">
-								<span className="relative z-10">Full Stack & Discord Bot Developer</span>
+								<span className="relative z-10">Frontend Developer</span>
 								<span className="absolute inset-0 animate-pulse rounded-full bg-linear-to-r from-purple-500/20 to-pink-500/20"></span>
 							</div>
 						</div>
@@ -95,41 +96,7 @@ export default function Portfolio() {
 							</Button>
 						</div>
 						<div className="flex gap-4 pt-4">
-							{[
-								{
-									href: "https://github.com/xirothedev",
-									target: "_blank",
-									rel: "noopener noreferrer",
-									icon: <Github className="h-5 w-5" />,
-									label: "GitHub",
-								},
-								{
-									href: "https://www.linkedin.com/in/xirothedev/",
-									target: "_blank",
-									rel: "noopener noreferrer",
-									icon: <Linkedin className="h-5 w-5" />,
-									label: "LinkedIn",
-								},
-								{
-									href: "mailto:lethanhtrung.trungle@gmail.com",
-									icon: <Mail className="h-5 w-5" />,
-									label: "Email",
-								},
-								{
-									href: "https://discord.com/users/1216624112139632711",
-									target: "_blank",
-									rel: "noopener noreferrer",
-									icon: <MessageCircle className="h-5 w-5" />,
-									label: "Discord",
-								},
-								{
-									href: "https://www.facebook.com/xirothedev",
-									target: "_blank",
-									rel: "noopener noreferrer",
-									icon: <Facebook className="h-5 w-5" />,
-									label: "Facebook",
-								},
-							].map(({ href, target, rel, icon, label }) => (
+							{CONTACTS.map(({ href, target, rel, icon, label }) => (
 								<Link key={label} href={href} target={target} rel={rel}>
 									<Button
 										variant="ghost"
@@ -168,7 +135,7 @@ export default function Portfolio() {
 				</div>
 
 				<div className="relative z-10 container">
-					<SectionHeading title="About Me" subtitle="My background and journey" />
+					<SectionHeading title="About Me" subtitle="Information" />
 
 					<div className="mt-16 grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 						<div className="relative">
@@ -184,12 +151,12 @@ export default function Portfolio() {
 									className="h-full w-full object-cover"
 								/>
 								<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-								<div className="absolute bottom-0 left-0 w-full p-6">
+								{/* <div className="absolute bottom-0 left-0 w-full p-6">
 									<div className="flex items-center gap-2">
 										<div className="h-3 w-3 animate-pulse rounded-full bg-green-500"></div>
 										<span className="text-sm font-medium">Available for work</span>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 
@@ -221,21 +188,19 @@ export default function Portfolio() {
 								<div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
 									<div className="space-y-1">
 										<div className="text-sm text-zinc-500">Full Name</div>
-										<div className="font-medium">Lê Thành Trung</div>
+										<div className="font-medium">Lê Văn Sinh</div>
 									</div>
 									<div className="space-y-1">
 										<div className="text-sm text-zinc-500">Email</div>
-										<div className="max-w-[180px] truncate font-medium">
-											lethanhtrung.trungle@gmail.com
-										</div>
+										<div className="max-w-[180px] truncate font-medium">lesinh3005@gmail.com</div>
 									</div>
 									<div className="space-y-1">
 										<div className="text-sm text-zinc-500">Location</div>
 										<div className="font-medium">Viet Nam 🇻🇳</div>
 									</div>
 									<div className="space-y-1">
-										<div className="text-sm text-zinc-500">Availability</div>
-										<div className="font-medium text-green-500">Open to opportunities</div>
+										<div className="text-sm text-zinc-500">Level</div>
+										<div className="font-medium text-green-500">Junior</div>
 									</div>
 								</div>
 

@@ -1,15 +1,11 @@
-// import { BundleMonitor } from "@/components/dev/bundle-monitor";
-// import { CacheDebug } from "@/components/dev/cache-debug";
-// import { PerformanceMonitor } from "@/components/dev/performance-monitor";
 import Footer from "@/components/footer";
-import { MouseFollower } from "@/components/mouse-follower";
 import { SWRProvider } from "@/components/providers/swr-provider";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Toaster } from "@/components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-// import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
@@ -20,24 +16,22 @@ const BASE_URL =
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
-	applicationName: "Xiro The Dev - Portfolio",
-	title: { default: "Xiro The Dev - Web Developer", template: "Xiro | %s" },
-	description: "Xiro's Portfolio - Full Stack & Discord Bot Developer",
+	applicationName: "Em Sinh Kay - Portfolio",
+	title: { default: "Em Sinh Kay - Web Developer", template: "Em Sinh Kay" },
+	description: "Em Sinh Kay Portfolio - Frontend Developer",
 	keywords: [
 		"Web Developer",
-		"Full Stack Developer",
-		"Discord Bot Developer",
 		"React",
 		"Next.js",
 		"TypeScript",
 		"Node.js",
 		"Tailwind CSS",
 		"Portfolio Developer",
-		"Xiro The Dev",
+		"Em Sinh Kay",
 	],
-	authors: [{ name: "Xiro The Dev", url: "https://github.com/xirothedev/" }],
-	creator: "Xiro The Dev",
-	publisher: "Xiro The Dev",
+	authors: [{ name: "Em Sinh Kay", url: "https://github.com/levansinh/" }],
+	creator: "Em Sinh Kay",
+	publisher: "Em Sinh Kay",
 	robots: {
 		index: true,
 		follow: true,
@@ -46,8 +40,8 @@ export const metadata: Metadata = {
 		"max-video-preview": -1,
 	},
 	openGraph: {
-		title: "Xiro The Dev - Web Developer",
-		description: "Xiro's Portfolio - Full Stack & Discord Bot Developer",
+		title: "Em Sinh Kay - Web Developer",
+		description: "Em Sinh Kay Portfolio - Frontend Developer",
 		type: "website",
 		locale: "vi_VN",
 		countryName: "Vietnam",
@@ -55,8 +49,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Xiro The Dev - Web Developer",
-		description: "Xiro's Portfolio - Full Stack & Discord Bot Developer",
+		title: "Em Sinh Kay - Web Developer",
+		description: "Em Sinh Kay Portfolio - Frontend Developer",
 	},
 	formatDetection: {
 		email: true,
@@ -118,7 +112,6 @@ export default function RootLayout({
 					<link rel="dns-prefetch" href="//vercel.live" />
 				</head>
 				<body id="home" className="scroll-smooth">
-					<MouseFollower />
 					<ScrollProgress />
 					<div className="pointer-events-none absolute inset-0 z-0">
 						<div className="animate-blob absolute top-20 left-10 h-72 w-72 rounded-full bg-purple-500 opacity-20 mix-blend-multiply blur-3xl filter"></div>

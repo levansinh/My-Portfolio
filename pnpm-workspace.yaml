@@ -1,10 +1,14 @@
+packages:
+    - .
+
 onlyBuiltDependencies:
+    - "@clerk/shared"
+    - "@prisma/client"
+    - "@prisma/engines"
     - "@tailwindcss/oxide"
     - core-js-pure
     - esbuild
-    - inngest-cli
-    - protobufjs
+    - prisma
     - sharp
     - unrs-resolver
-packages:
-    - .
+    - workerd
